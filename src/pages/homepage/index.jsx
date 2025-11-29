@@ -3,8 +3,6 @@ import Header from '../../components/ui/Header';
 import Footer from '../../components/ui/Footer';
 import HeroSection from './components/HeroSection';
 import SolutionPathwaySelector from './components/SolutionPathwaySelector';
-import FeaturedCaseStudies from './components/FeaturedCaseStudies';
-import TrustSignalBanner from './components/TrustSignalBanner';
 import InteractiveSolutionShowcase from './components/InteractiveSolutionShowcase';
 import CTASection from './components/CTASection';
 
