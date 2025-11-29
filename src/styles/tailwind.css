@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #1E3A5F; /* deep navy - trust and expertise */
+    --color-primary-foreground: #FFFFFF; /* white - WCAG AA contrast */
+    
+    /* Secondary Colors */
+    --color-secondary: #4A90A4; /* professional blue - supporting elements */
+    --color-secondary-foreground: #FFFFFF; /* white - WCAG AA contrast */
+    
+    /* Accent Colors */
+    --color-accent: #F4A261; /* warm orange - key actions and highlights */
+    --color-accent-foreground: #1F2937; /* gray-800 - WCAG AA contrast */
+    
+    /* Background Colors */
+    --color-background: #FEFEFE; /* clean canvas - content clarity */
+    --color-foreground: #2C3E50; /* strong readability - body content */
+    
+    /* Surface Colors */
+    --color-card: #F8F9FA; /* subtle depth - cards and sections */
+    --color-card-foreground: #2C3E50; /* gray-800 - body content */
+    --color-popover: #FFFFFF; /* white - popover background */
+    --color-popover-foreground: #2C3E50; /* gray-800 - popover text */
+    
+    /* Muted Colors */
+    --color-muted: #F8F9FA; /* gray-50 - muted backgrounds */
+    --color-muted-foreground: #6C757D; /* clear hierarchy - supporting text */
+    
+    /* Border & Input */
+    --color-border: #E5E7EB; /* gray-200 - clean borders */
+    --color-input: #E5E7EB; /* gray-200 - input borders */
+    --color-ring: #1E3A5F; /* deep navy - focus rings */
+    
+    /* Status Colors */
+    --color-success: #28A745; /* positive confirmation */
+    --color-success-foreground: #FFFFFF; /* white - WCAG AA contrast */
+    --color-warning: #FFC107; /* attention without alarm */
+    --color-warning-foreground: #1F2937; /* gray-800 - WCAG AA contrast */
+    --color-error: #DC3545; /* clear concern - alerts */
+    --color-error-foreground: #FFFFFF; /* white - WCAG AA contrast */
+    --color-destructive: #DC3545; /* red-600 - destructive actions */
+    --color-destructive-foreground: #FFFFFF; /* white - WCAG AA contrast */
+    
+    /* Brand Specific Colors */
+    --color-brand-wisdom: #7c3aed; /* purple-600 - enlightenment and innovation */
+    --color-brand-trust: #1e40af; /* blue-800 - authority and credibility */
+    --color-brand-conversion: #059669; /* green-600 - success and growth */
+    --color-brand-cta: #dc2626; /* red-600 - urgent actions */
+    
+    /* Typography */
+    --font-headline: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-accent: 'JetBrains Mono', monospace;
+    
+    /* Spacing */
+    --spacing-base: 8px;
+    --spacing-xs: 12px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    
+    /* Border Radius */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 200ms ease-out;
+    --transition-base: 300ms ease-out;
+    --transition-slow: 400ms ease-out;
+  }
+
+  .dark {
+    --color-background: #0A0A0A; /* dark background */
+    --color-foreground: #F8F9FA; /* light text */
+    --color-card: #1F2937; /* gray-800 - dark cards */
+    --color-card-foreground: #F8F9FA; /* gray-50 - light text */
+    --color-popover: #1F2937; /* gray-800 - dark popover */
+    --color-popover-foreground: #F8F9FA; /* gray-50 - light text */
+    --color-muted: #374151; /* gray-700 - dark muted */
+    --color-muted-foreground: #9CA3AF; /* gray-400 - muted text */
+    --color-border: #374151; /* gray-700 - dark borders */
+    --color-input: #374151; /* gray-700 - dark inputs */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+  }
+
+  code, pre {
+    font-family: var(--font-accent);
+  }
+}
+
+@layer components {
+  .main-content {
+    @apply min-h-screen bg-background;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-brand-wisdom to-secondary bg-clip-text text-transparent;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-brand-cta to-accent hover:from-accent hover:to-brand-cta transition-all duration-300;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .neural-pattern {
+    background-image: radial-gradient(circle at 2px 2px, rgba(30, 58, 95, 0.05) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+}
+
+@layer utilities {
+  .transition-base {
+    transition: all var(--transition-base);
+  }
+
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+
+  .transition-slow {
+    transition: all var(--transition-slow);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn var(--transition-base) ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideIn var(--transition-slow) ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .backdrop-blur-custom {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
