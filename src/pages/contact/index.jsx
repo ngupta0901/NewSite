@@ -4,10 +4,7 @@ import Footer from '../../components/ui/Footer';
 import ContactHero from './components/ContactHero';
 import ContactMethods from './components/ContactMethods';
 import ConsultationForm from './components/ConsultationForm';
-import OfficeLocations from './components/OfficeLocations';
 import ResourceCenter from './components/ResourceCenter';
-import FAQSection from './components/FAQSection';
-import TrustSignals from './components/TrustSignals';
 
 const Contact = () => {
   useEffect(() => {

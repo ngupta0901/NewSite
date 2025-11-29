@@ -4,8 +4,6 @@ import Footer from '../../components/ui/Footer';
 import HeroSection from './components/HeroSection';
 import SolutionsGrid from './components/SolutionsGrid';
 import InteractivePlayground from './components/InteractivePlayground';
-import CaseStudiesSection from './components/CaseStudiesSection';
-import TechnicalSpecs from './components/TechnicalSpecs';
 import ROICalculator from './components/ROICalculator';
 import CTASection from './components/CTASection';
 
