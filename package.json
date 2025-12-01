@@ -61,7 +61,7 @@
     "start": "vite",
     "build": "vite build --sourcemap",
     "serve": "vite preview",
-    "vercel-build": "vite build --sourcemap --outDir 'build'"
+    "vercel-build": "vite build --sourcemap --outDir build"
   },
   "eslintConfig": {
     "extends": [
