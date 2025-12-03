@@ -144,8 +144,13 @@ const SolutionsGrid = () => {
                   <div className="text-xs text-muted-foreground">Savings</div>
                 </div>
               </div>
-              
-              <Button variant="outline" size="sm" fullWidth iconName="ArrowRight" iconPosition="right">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                fullWidth 
+                iconName="ArrowRight" 
+                iconPosition="right"
+              >
                 Learn More
               </Button>
             </div>

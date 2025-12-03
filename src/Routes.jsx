@@ -15,6 +15,8 @@ import Security from './pages/security';
 import Compliance from './pages/compliance';
 import Cookies from './pages/cookies'
 import CareersPage from './pages/careers'
+import PredictiveEnginePage from "./pages/predictive-analytics-engine";
+
 
 const Routes = () => {
   return (
@@ -35,6 +37,7 @@ const Routes = () => {
         <Route path="/compliance" element={<Compliance />} />
         <Route path="/cookies" element={<Cookies />} />
         <Route path='/careers' element={<CareersPage/>} />
+        <Route path='/predictive' element={<PredictiveEnginePage/>}/>
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>
